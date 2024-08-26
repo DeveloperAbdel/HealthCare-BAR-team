@@ -19,12 +19,12 @@ public class HealthRunner {
 //      }
 
 
-:wqq
+
         System.out.println("1. Create Patient");
         System.out.println("2. Read Patient");
         System.out.println("3. Update Patient");
         System.out.println("4. Delete Patient");
-        
+
 //im here
         int choice = scanner.nextInt();
         scanner.nextLine();

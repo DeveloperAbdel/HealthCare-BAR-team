@@ -1,5 +1,6 @@
 package dao;
 
+
 import jdbc.DatabaseConnection;
 import model.Patient;
 
@@ -30,7 +31,7 @@ public class PatientDAO {
         public Patient getPatientById(int patientId) throws SQLException {
             String query = "SELECT * FROM Patients WHERE PatientID = ?";
             try (Connection conn = DatabaseConnection.getConnection();
-                 PreparedStatement stmt = conn.prepareStatement(query)) {
+                 PreparedStatement stmt = conn.prepareStatement(query)){
                 stmt.setInt(1, patientId);
                 try (ResultSet rs = stmt.executeQuery()) {
                     if (rs.next()) {
